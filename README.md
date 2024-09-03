@@ -4,6 +4,8 @@
 
 OpenTofu module for deploying GCP Workload Identity Federation for ServiceAuthCentral
 
+This creates both the pool and the provider with the nominal configuration.
+
 ## Usage
 
 ```hcl
@@ -16,4 +18,41 @@ module "serviceauthcentral_workload_identity_gcp" {
 ```
 
 <!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 5.0.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_google"></a> [google](#provider\_google) | >= 5.0.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [google_iam_workload_identity_pool.serviceauthcentral_pool](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/iam_workload_identity_pool) | resource |
+| [google_iam_workload_identity_pool_provider.serviceauthcentral_provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/iam_workload_identity_pool_provider) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | The name of the Workload Identity | `string` | n/a | yes |
+| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | The GCP project id | `string` | n/a | yes |
+| <a name="input_sac_issuer"></a> [sac\_issuer](#input\_sac\_issuer) | The issuer for ServiceAuthCentral | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_provider_name"></a> [provider\_name](#output\_provider\_name) | n/a |
 <!-- END_TF_DOCS -->
