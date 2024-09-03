@@ -4,6 +4,8 @@
 
 OpenTofu module for deploying GCP Workload Identity Federation for ServiceAuthCentral
 
+This creates both the pool and the provider with the nominal configuration.
+
 ## Usage
 
 ```hcl
