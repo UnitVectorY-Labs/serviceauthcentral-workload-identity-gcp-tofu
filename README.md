@@ -2,9 +2,7 @@
 
 # serviceauthcentral-workload-identity-gcp-tofu
 
-OpenTofu module for deploying GCP Workload Identity Federation for ServiceAuthCentral
-
-This creates both the pool and the provider with the nominal configuration.
+OpenTofu module for deploying ServiceAuthCentral Workload Identity Federation in GCP
 
 ## Usage
 
